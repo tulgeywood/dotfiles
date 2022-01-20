@@ -1,0 +1,14 @@
+" Plugins
+source $HOME/.config/nvim/vimplug.vim
+" General
+source $HOME/.config/nvim/general.vim
+" Keymaps
+source $HOME/.config/nvim/keymaps.vim
+" Appearance
+source $HOME/.config/nvim/appearance.vim
+" Airline
+source $HOME/.config/nvim/lualine.vim
+" CoC
+source $HOME/.config/nvim/coc.vim
+" treesitter
+source $HOME/.config/nvim/treesitter.vim
