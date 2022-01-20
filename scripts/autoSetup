@@ -79,6 +79,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH"/themes/p
 # install nvim plugins
 nvim --headless +PlugInstall +qall
 nvim --headless +PlugInstall +qall
+nvim --headless +"CocInstall -sync coc-diagnostic coc-sh coc-python|qa"
 
 # source zshrc
 source .zshrc
