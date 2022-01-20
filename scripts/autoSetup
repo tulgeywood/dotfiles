@@ -41,8 +41,6 @@ FORMULAE=(
     "python3"
 )
 
-# install oh-my-zsh
-export ZSH=~/.config/.oh-my-zsh
 
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -50,6 +48,13 @@ export ZSH=~/.config/.oh-my-zsh
 # install casks and formulae
 "$HOMEBREW_PATH" install ${FORMULAE[*]}
 "$HOMEBREW_PATH" install --cask ${CASKS[*]}
+
+# download dotfiles
+git clone https://github.com/tulgeywood/dotfiles.git ~/.config
+
+# link zshrc and p10k.zsh
+ln -s ~/.config/.zshrc ~/.zshrc
+ln -s ~/.config/.p10k.zsh ~/.p10k.zsh
 
 # install bash language server
 npm i -g bash-language-server
@@ -62,6 +67,8 @@ npm i -g bash-language-server
 sudo xattr -r -d com.apple.quarantine /Applications/Alacritty.app
 
 # install oh-my-zsh
+export ZSH=~/.config/.oh-my-zsh
+
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
 
 # oh-my-zsh plugins
