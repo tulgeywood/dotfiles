@@ -1,0 +1,70 @@
+#!/bin/bash
+# current user
+CURRENT_USER="$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ {print $3}')"
+
+if [[ "$(uname -m)" == 'arm64' ]]; then
+    HOMEBREW_PATH=/opt/homebrew/bin/brew
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+    HOMEBREW_PATH=/usr/local/bin/brew
+fi
+
+# create .config
+mkdir ~/.config
+
+CASKS=(
+    "alacritty"
+    "amethyst"
+    "google-chrome"
+    "firefox"
+    "suspicious-package"
+    "packages"
+    "notion"
+    "autodesk-fusion360"
+    "prusaslicer"
+    "1password"
+)
+
+FORMULAE=(
+    "nvim"
+    "bat"
+    "ncdu"
+    "ffmpeg"
+    "git"
+    "nmap"
+    "shellcheck"
+    "ruby"
+    "node"
+    "yarn"
+    "tldr"
+    "python3"
+)
+
+# install oh-my-zsh
+export ZSH=~/.config/.oh-my-zsh
+
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install casks and formulae
+"$HOMEBREW_PATH" install ${FORMULAE[*]}
+"$HOMEBREW_PATH" install --cask ${CASKS[*]}
+
+# install bash language server
+npm i -g bash-language-server
+
+# install fonts
+"$HOMEBREW_PATH" tap homebrew/cask-fonts
+"$HOMEBREW_PATH" install --cask font-sauce-code-pro-nerd-font
+
+# remove alacritty quarantine
+sudo xattr -r -d com.apple.quarantine /Applications/Alacritty.app
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
+
+# oh-my-zsh plugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH"/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH"/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH"/themes/powerlevel10k
