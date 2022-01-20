@@ -17,6 +17,7 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+let g:coc_global_extensions = ['coc-diagnostic', 'coc-sh']
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
