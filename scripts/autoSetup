@@ -75,3 +75,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH"/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH"/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH"/themes/powerlevel10k
+
+# install nvim plugins
+nvim --headless +PlugInstall +qall
+nvim --headless +PlugInstall +qall
+
+# source zshrc
+source .zshrc
