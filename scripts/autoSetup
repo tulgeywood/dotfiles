@@ -12,7 +12,7 @@ fi
 
 # create directories
 mkdir ~/.config
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 mkdir ~/.config/alacritty
 
 # create links
@@ -29,6 +29,7 @@ ln -nfs ~/git/dotfiles/nvim/keymaps.vim ~/.config/nvim/keymaps.vim
 ln -nfs ~/git/dotfiles/nvim/lualine.vim ~/.config/nvim/lualine.vim
 ln -nfs ~/git/dotfiles/nvim/treesitter.vim ~/.config/nvim/treesitter.vim
 ln -nfs ~/git/dotfiles/nvim/vimplug.vim ~/.config/nvim/vimplug.vim
+ln -nfs ~/git/dotfiles/nvim/snips ~/.config/nvim/
 
 CASKS=(
     "alacritty"
@@ -90,10 +91,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH"/plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH"/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH"/themes/powerlevel10k
 
+# pip installs
+python3 -m pip install --user --upgrade pynvim
+
 # install nvim plugins
 nvim --headless +PlugInstall +qall
 nvim --headless +PlugInstall +qall
-nvim --headless +"CocInstall -sync coc-diagnostic coc-sh coc-json coc-python|qa"
+nvim --headless +"CocInstall -sync coc-diagnostic coc-sh coc-json coc-python coc-snippets|qa"
 
 # source zshrc
 source .zshrc
