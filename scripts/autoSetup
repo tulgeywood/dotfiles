@@ -10,8 +10,25 @@ else
     HOMEBREW_PATH=/usr/local/bin/brew
 fi
 
-# create .config
+# create directories
 mkdir ~/.config
+mkdir ~/.config/nvim
+mkdir ~/.config/alacritty
+
+# create links
+# link zshrc and p10k.zsh
+ln -nfs ~/git/dotfiles/.zshrc ~/.zshrc
+ln -nfs ~/git/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -nfs ~/git/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -nfs ~/git/dotfiles/nvim/appearance.vim ~/.config/nvim/appearance.vim
+ln -nfs ~/git/dotfiles/nvim/coc.vim ~/.config/nvim/coc.vim
+ln -nfs ~/git/dotfiles/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+ln -nfs ~/git/dotfiles/nvim/general.vim ~/.config/nvim/general.vim
+ln -nfs ~/git/dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -nfs ~/git/dotfiles/nvim/keymaps.vim ~/.config/nvim/keymaps.vim
+ln -nfs ~/git/dotfiles/nvim/lualine.vim ~/.config/nvim/lualine.vim
+ln -nfs ~/git/dotfiles/nvim/treesitter.vim ~/.config/nvim/treesitter.vim
+ln -nfs ~/git/dotfiles/nvim/vimplug.vim ~/.config/nvim/vimplug.vim
 
 CASKS=(
     "alacritty"
@@ -52,9 +69,6 @@ FORMULAE=(
 # download dotfiles
 git clone https://github.com/tulgeywood/dotfiles.git ~/.config
 
-# link zshrc and p10k.zsh
-ln -s ~/.config/.zshrc ~/.zshrc
-ln -s ~/.config/.p10k.zsh ~/.p10k.zsh
 
 # install bash language server
 npm i -g bash-language-server
