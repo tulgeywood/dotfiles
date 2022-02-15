@@ -22,4 +22,7 @@
     "diagnostic.virtualText": false,
     "diagnostic.checkCurrentLine": true,
     "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+    "snippets.extends": {
+        "xml": ["plist"]
+    }
 }
