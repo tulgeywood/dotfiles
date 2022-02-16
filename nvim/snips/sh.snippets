@@ -47,7 +47,7 @@ for ${1:needle} in ${2:haystack}; do
 done
 endsnippet
 
-snippet wh "while loop" bA
+snippet while "while loop" A
 while ${1:condition}; do
 	${0:${VISUAL}}
 done
@@ -81,6 +81,6 @@ function ${1:function_name}() {
 }
 endsnippet
 
-snippet cuser "current user" bA
-"$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ {print \$3}'"
+snippet CURRENT_USER= "current user" bA
+CURRENT_USER="$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ {print \$3}')"
 endsnippet
