@@ -3,6 +3,8 @@ shell:
 live_config_reload: true
 key_bindings:
   - { key: N, mods: Command, action: CreateNewWindow }
+  - { key: Up, mods: Command|Shift, action: IncreaseFontSize }
+  - { key: Down, mods: Command|Shift, action: DecreaseFontSize }
 window:
   decorations: Transparent
   padding:
@@ -12,6 +14,12 @@ scrolling:
   history: 100000
 font:
   normal:
+    family: SauceCodePro Nerd Font
+  bold:
+    family: SauceCodePro Nerd Font
+  italic:
+    family: SauceCodePro Nerd Font
+  bold_italic:
     family: SauceCodePro Nerd Font
   size: 14.0
 colors:

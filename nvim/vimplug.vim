@@ -19,6 +19,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'terryma/vim-smooth-scroll'
+Plug 'dstein64/vim-startuptime'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
 "nvim telescope needs plenary and telescope
 Plug 'nvim-lua/plenary.nvim'

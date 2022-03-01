@@ -24,13 +24,13 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet if "if statement" bA
+snippet if "if statement" b
 if ${1:condition}; then
 	${0:${VISUAL:# conditional actions}}
 fi
 endsnippet
 
-snippet elif "elif statement" bA
+snippet elif "elif statement" b
 elif ${1:condition}; then
 	${0:${VISUAL}}
 endsnippet
@@ -41,32 +41,32 @@ for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do
 done
 endsnippet
 
-snippet fori "for in looop" bA
+snippet fori "for in looop" b
 for ${1:needle} in ${2:haystack}; do
 	${0:${VISUAL}}
 done
 endsnippet
 
-snippet while "while loop" A
+snippet while "while loop" b
 while ${1:condition}; do
 	${0:${VISUAL}}
 done
 endsnippet
 
-snippet until "until loop" bA
+snippet until "until loop" b
 until ${1:condition}; do
 	${0:${VISUAL}}
 done
 endsnippet
 
-snippet case "case statement" bA
+snippet case "case statement" b
 case ${1:word} in
 	${2:pattern})
 		${0};;
 esac
 endsnippet
 
-snippet go "while getopts" bA
+snippet go "while getopts" b
 while getopts '${1:o}' ${2:opts}; do
 	case $$2 in
 	${3:o0})
@@ -75,7 +75,7 @@ while getopts '${1:o}' ${2:opts}; do
 done
 endsnippet
 
-snippet fun "function" bA
+snippet fun "function" b
 function ${1:function_name}() {
 	${0:#function_body}
 }
@@ -83,4 +83,34 @@ endsnippet
 
 snippet CURRENT_USER= "current user" bA
 CURRENT_USER="$(scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ {print \$3}')"
+endsnippet
+
+snippet separator "comment separator" b
+##################################################
+# ${1:comment}
+##################################################
+endsnippet
+
+snippet header "script header block" b
+###################################################################################################
+# Script Name: ${1:Script Name}
+# By: Jesse Shipley / Created: ${2:Date}
+# Version: ${3:x.x.x}
+#
+# Description: ${4:Description}
+###################################################################################################
+endsnippet
+
+snippet funccomment "function comment" b
+#######################################
+# ${1:Description}
+# Globals:
+#   ${2:Global Variables}
+# Arguments:
+#   ${3: Arguments}
+# Outputs:
+#   ${4: stdout}
+# Returns:
+#   ${5: 0 on success, non-zero on error.}
+#######################################
 endsnippet
