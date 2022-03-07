@@ -1,0 +1,5 @@
+#!/bin/bash
+
+function lcc() {
+    fc -ln -1 | pbcopy
+}
