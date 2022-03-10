@@ -12,3 +12,5 @@ source $HOME/.config/nvim/lualine.vim
 source $HOME/.config/nvim/coc.vim
 " treesitter
 source $HOME/.config/nvim/treesitter.vim
+" comments.nvim
+source $HOME/.config/nvim/comments.vim

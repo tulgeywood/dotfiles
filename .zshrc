@@ -22,6 +22,7 @@ ZSH_DISABLE_COMPFIX=true
 
 # Set MANPAGER to nvim for better man pages
 export MANPAGER="nvim +Man!"
+export MANWIDTH=999
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

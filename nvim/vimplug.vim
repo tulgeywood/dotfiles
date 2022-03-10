@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-loc
 "nvim telescope needs plenary and telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'numToStr/Comment.nvim'
 
 " All of your Plugins must be added before the following line
 " Initialize plugin system
