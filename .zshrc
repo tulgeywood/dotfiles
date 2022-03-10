@@ -20,6 +20,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Stop warnings when switching to root
 ZSH_DISABLE_COMPFIX=true
 
+# Set MANPAGER to nvim for better man pages
+export MANPAGER="nvim +Man!"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
