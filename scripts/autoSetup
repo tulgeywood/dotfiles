@@ -43,6 +43,7 @@ CASKS=(
     "autodesk-fusion360"
     "prusaslicer"
     "1password"
+    "monitorcontrol"
 )
 
 FORMULAE=(
@@ -58,6 +59,7 @@ FORMULAE=(
     "yarn"
     "tldr"
     "python3"
+    "lazygit"
 )
 
 
