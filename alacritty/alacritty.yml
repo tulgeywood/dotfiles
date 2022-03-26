@@ -5,6 +5,7 @@ key_bindings:
   - { key: N, mods: Command, action: CreateNewWindow }
   - { key: Up, mods: Command|Shift, action: IncreaseFontSize }
   - { key: Down, mods: Command|Shift, action: DecreaseFontSize }
+  - { key: L, mods: Control, action: ClearHistory }
 window:
   decorations: Transparent
   padding:
