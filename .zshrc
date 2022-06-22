@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/python@3.9/libexec/bin:$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/.oh-my-zsh"
@@ -16,6 +16,7 @@ export ZSH="$HOME/.config/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 # Stop warnings when switching to root
 ZSH_DISABLE_COMPFIX=true
@@ -23,6 +24,9 @@ ZSH_DISABLE_COMPFIX=true
 # Set MANPAGER to nvim for better man pages
 export MANPAGER="nvim +Man!"
 export MANWIDTH=999
+
+# 1Password Aliases
+alias jira="op run --env-file=$HOME/.config/op/jira.env -- jira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

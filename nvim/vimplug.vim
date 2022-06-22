@@ -25,6 +25,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-loc
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'numToStr/Comment.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 " All of your Plugins must be added before the following line
 " Initialize plugin system

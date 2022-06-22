@@ -11,13 +11,13 @@
 			"args": ["-i", "2", "-bn", "-ci", "-sr"]
 		}
 	},
-	"languageserver": {
-        "bash": {
-            "command": "bash-language-server",
-            "args": ["start"],
-            "filetypes": ["sh"],
-            "ignoredRootPaths": ["~"]
-		}
+    	"languageserver": {
+            "bash": {
+                "command": "bash-language-server",
+                "args": ["start"],
+                "filetypes": ["sh"],
+                "ignoredRootPaths": ["~"]
+            }
 	},
     "diagnostic.virtualText": false,
     "diagnostic.checkCurrentLine": true,
