@@ -52,7 +52,7 @@ color_schemes:
       focused_match:
         foreground: '#EFF1F5' # base
         background: '#40A02B' # green
-      bar:
+      colors.footer_bar:
         foreground: '#EFF1F5' # base
         background: '#6C6F85' # subtext0
 

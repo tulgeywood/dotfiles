@@ -100,7 +100,7 @@ python3 -m pip install --user --upgrade pynvim
 # install nvim plugins
 nvim --headless +PlugInstall +qall
 nvim --headless +PlugInstall +qall
-nvim --headless +"CocInstall -sync coc-diagnostic coc-sh coc-json coc-python coc-snippets|qa"
+nvim --headless +"CocInstall -sync coc-diagnostic coc-json coc-python coc-snippets|qa"
 
 # source zshrc
 source .zshrc
