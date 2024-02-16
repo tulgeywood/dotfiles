@@ -26,6 +26,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'https://github.com/apple/pkl-neovim.git'
 
 " All of your Plugins must be added before the following line
 " Initialize plugin system
