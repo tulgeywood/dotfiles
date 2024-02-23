@@ -23,5 +23,6 @@
     "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
     "snippets.extends": {
         "xml": ["plist"]
-    }
+    },
+    "suggest.noselect": true
 }
