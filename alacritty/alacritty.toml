@@ -109,6 +109,7 @@ history = 100000
 program = "/bin/zsh"
 
 [window]
+option_as_alt = "Both"
 decorations = "Transparent"
 
 [window.padding]
