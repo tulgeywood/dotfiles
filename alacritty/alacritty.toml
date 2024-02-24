@@ -110,8 +110,10 @@ program = "/bin/zsh"
 
 [window]
 option_as_alt = "Both"
-decorations = "Transparent"
+decorations = "Buttonless"
+opacity = 0.8
+blur = true
 
 [window.padding]
 x = 5
-y = 30
+y = 5
